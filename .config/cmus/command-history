@@ -1,0 +1,4 @@
+add ~/Music
+set status_display_program=~/.local/bin/cmus-notify
+set status_display_program=/.local/bin/cmus-notify
+add Music/songs/

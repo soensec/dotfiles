@@ -1,0 +1,21 @@
+#!/bin/sh
+while read file
+do
+  case "$1" in
+  "w") 	
+    wal -i "$file"
+    sed -i ~/.Xresources -re '1,1000d'
+    cat ~/.cache/wal/colors.Xresources >> ~/.Xresources
+    wal-telegram --background $file -g
+    pywalfox update
+    zathura-pywal
+    pkill dunst && dunst &
+    pkill dwm
+    dwmblocks &
+    notify-send "Enjoy your new colorscheme!" ;;
+
+  "y")
+    xclip -selection clipboard "$file" -t image/png &&
+    notify-send "$file copied to clipboard!"
+  esac
+done
