@@ -38,6 +38,9 @@ export HISTORY_IGNORE="(ls|ls -a|cd|clear|pwd|exit|cd -|cd ..)"
 # Enable ignoring duplicate commands in the history
 setopt HIST_IGNORE_ALL_DUPS
 
+# Enable cargo
+export PATH=$HOME/.local/bin:$HOME/.cargo/bin:$PATH
+
 # Enable finding and skipping duplicate commands in the history
 setopt HIST_FIND_NO_DUPS
 
@@ -51,7 +54,8 @@ bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 
 # Define some commonly used aliases
-alias ls="ls --group-directories-first"
+alias ls="exa --icons"
+alias bat="bat --style=auto"
 alias cp="cp -iv"
 alias mv='mv -iv'
 alias rm='rm -iv'
