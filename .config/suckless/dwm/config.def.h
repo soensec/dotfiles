@@ -62,7 +62,7 @@ static Sp scratchpads[] = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "" };
+static const char *tags[] = { "", "", "", "", "", "" };
 
 static const Rule rules[] = {
       /* xprop(1):
@@ -76,6 +76,7 @@ static const Rule rules[] = {
   { "qutebrowser",          NULL,         NULL,          1<<2,        0,          0,         -1,        -1 },
   { "Steam",                NULL,         NULL,          1<<3,        0,          0,         -1,        -1 },
   { "TelegramDesktop",      NULL,         NULL,          1<<4,        0,          0,         -1,        -1 },
+  { "mpv",                  NULL,         NULL,          1<<5,        0,          0,         -1,        -1 },
   { "St",                   NULL,         NULL,             0,        0,          1,          0,        -1 },
   { "Qalculate-gtk",        NULL,         NULL,             0,        1,          0,          1,        -1 },
   { NULL,               "spterm",         NULL,      SPTAG(0),        1,          1,          1,        -1 },
